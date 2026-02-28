@@ -1,0 +1,833 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CXplora - Your Unified Digital Ecosystem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: #1877f2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+            .nav-link:hover {
+                color: #e7f3ff !important;
+            }
+
+        header {
+            background: linear-gradient(135deg, #1877f2, #00c4b4);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        h1, h2 {
+            color: #1877f2;
+            font-weight: 700;
+        }
+
+        .card, .tab-pane {
+            background: linear-gradient(to bottom, white, #f8f9fa);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            }
+
+        .section-icon {
+            font-size: 3rem;
+            color: #1877f2;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        img {
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            margin: 25px 0;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+            img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+            }
+
+        .amazing-desc {
+            font-style: italic;
+            color: #65676b;
+            font-size: 1.2rem;
+            margin: 25px 0;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .accordion-button {
+            background: linear-gradient(to right, #f0f2f5, #e7f3ff);
+            color: #1877f2;
+            font-weight: 600;
+            border-radius: 15px 15px 0 0;
+            transition: background 0.3s ease;
+        }
+
+            .accordion-button:not(.collapsed) {
+                background: linear-gradient(to right, #1877f2, #00c4b4);
+                color: white;
+            }
+
+        .accordion-body {
+            background: #fff;
+            border-radius: 0 0 15px 15px;
+            padding: 25px;
+        }
+
+        footer {
+            background: linear-gradient(to top, white, #f8f9fa);
+            border-top: 1px solid #dddfe2;
+            padding: 50px 20px;
+            text-align: center;
+            color: #65676b;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">CXplora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problem">The Challenge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solution">Our Solution</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#payment">Payments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#policies">Policies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home">
+        <div class="container">
+            <h1 class="display-3">CXplora</h1>
+            <p class="lead">Your All-in-One Unified Digital Ecosystem</p>
+            <p class="amazing-desc">One seamless platform. Everything you need — social, shopping, finance, learning, health, entertainment, AI tools, and more — without ever switching apps.</p>
+            <img src="https://assets.new.siemens.com/siemens/assets/api/uuid:1bf7fb9f-22d1-4e4c-b012-9d4b344a1da8/width:2224/quality:high/simatic-wincc-unified-system-visual.jpg" alt="Unified Digital Ecosystem" class="img-fluid">
+        </div>
+    </header>
+
+    <div class="container my-5">
+
+        <!-- The Challenge -->
+        <section id="problem" class="card">
+            <div class="text-center"><i class="fas fa-exclamation-triangle section-icon"></i></div>
+            <h2>The Digital Challenge</h2>
+            <p>In today’s hyper-connected world, the digital landscape is a fragmented mosaic of disjointed platforms, apps, and services. Internet users—5.56 billion strong in 2025, representing 67.9% of the global population—are forced to navigate a labyrinth of separate applications for social networking, e-commerce, entertainment, financial services, education, and more. This fragmentation creates a disjointed user experience, where individuals must juggle multiple logins, interfaces, and ecosystems, leading to inefficiencies, wasted time, and a lack of cohesion. For businesses and individuals alike, the absence of a unified platform that seamlessly integrates the entire internet experience—while maintaining privacy, accessibility, and innovation—poses a significant challenge. The digital world, despite its growth, remains siloed, leaving users yearning for a transformative solution that unifies their online lives into a single, intuitive, and all-encompassing ecosystem.</p>
+            <p>This problem is particularly acute in emerging markets like South Africa, where digital inclusion is critical for economic empowerment. The complexity of managing multiple platforms can exclude those with limited digital literacy or access to resources, exacerbating inequality. Moreover, existing platforms often rely on third-party APIs and technologies, creating dependencies that stifle innovation and limit customization. There is an urgent need for a groundbreaking, self-sustaining digital ecosystem that transcends these barriers, offering a unified, accessible, and revolutionary platform that empowers users globally while fostering local economic growth.</p>
+            <p class="amazing-desc">CXplora eliminates this chaos — delivering a single, intuitive, powerful digital universe built from the ground up.</p>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/08c426240202501.69397a9e36e33.png" alt="Digital Unity" class="img-fluid">
+        </section>
+
+        <!-- Our Solution -->
+        <section id="solution" class="card">
+            <div class="text-center"><i class="fas fa-lightbulb section-icon"></i></div>
+            <h2>Our Revolutionary Solution</h2>
+            <p>Imagine a world where every digital interaction—whether connecting with friends, shopping from global marketplaces, accessing cutting-edge AI tools, managing finances, or learning new skills—is seamlessly integrated into one breathtakingly intuitive platform. Complex Explora (CXplora), founded by the visionary Boy Lekalakala in 2025, is not just a solution; it is a paradigm shift, a digital renaissance that redefines how humanity engages with the internet. Built entirely from scratch, without reliance on external APIs or technologies, CXplora is a marvel of innovation—a unified ecosystem that brings the entire internet experience into a single, awe-inspiring application.</p>
+            <p>CXplora is more than an app; it’s an online computer, accessible globally, where every function communicates within a meticulously designed architecture. Picture a digital universe where you can browse the world’s e-commerce stores, stream entertainment, connect with communities, manage finances, access AI-driven insights, and even send emails—all without ever leaving the platform. This is not just convenience; it’s a revolution that eliminates the chaos of fragmented digital experiences, replacing it with a harmonious, self-sustaining ecosystem that feels like magic.</p>
+            <p>What makes CXplora truly extraordinary is its commitment to being a 100% original platform, crafted with unparalleled ingenuity to serve the needs of 5.56 billion internet users and beyond. By integrating social networking, global e-commerce, entertainment, financial services, education, and AI-driven tools into one interface, CXplora empowers users with a seamless, intuitive experience that transcends borders and barriers. Whether you’re a student in Johannesburg accessing world-class educational resources, a small business owner in Cape Town tapping into global markets, or a creative in Durban collaborating with international communities, CXplora is your gateway to a limitless digital world.</p>
+            <p>This platform is a beacon of inclusivity, designed to bridge the digital divide. In South Africa, where economic growth and digital inclusion are paramount, CXplora’s unified approach ensures that users of all backgrounds can access its transformative features with ease. By eliminating the need for multiple apps and logins, CXplora simplifies the digital experience, making it accessible to those with limited technical expertise while offering advanced tools for power users. It’s a platform that grows with you, adapting to your needs with the grace and precision of a symphony.</p>
+            <p>The wonder of CXplora lies in its ability to solve the fragmentation problem with elegance and ambition. CXplora brings this vision to life, developing a robust cloud infrastructure, launching services, and contributing to South Africa’s economic growth, fostering innovation and opportunity in a nation poised for digital transformation. CXplora is not just a platform; it’s a movement—a dazzling, unified ecosystem that promises to reshape the internet, making it more connected, inclusive, and extraordinary for all.</p>
+            <p class="amazing-desc">No more app overload. Just pure, magical connectivity that adapts to you.</p>
+            <img src="https://www.bigcommerce.com/_next/image/?url=https%3A%2F%2Fs3.amazonaws.com%2Fintegrated-apps%2Fjtwiscmn%2Fqrfwlxmp.png&w=3840&q=75" alt="Global Unified Commerce" class="img-fluid">
+        </section>
+
+        <!-- All Services with E-commerce Integration -->
+        <section id="services" class="card">
+            <div class="text-center"><i class="fas fa-cubes section-icon"></i></div>
+            <h2>All CXplora Services — Full Explanation with E-commerce Integration</h2>
+            <p>CXplora offers a comprehensive suite of integrated services, all built from scratch into one seamless platform. Each service incorporates e-commerce elements where relevant, allowing users to buy, sell, subscribe, or transact directly within the feature. Below is a full explanation of each service category, highlighting how it works, key features, benefits, and e-commerce integration for users and businesses.</p>
+            <div class="accordion" id="servicesAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#service1">
+                            Networking
+                        </button>
+                    </h2>
+                    <div id="service1" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>CXplora's networking service enables seamless professional and personal connections. Build your network, join groups, attend virtual events, and collaborate in real-time. Key features include profile customization, connection recommendations via AI, and integrated video calls. Benefits: Expand your professional opportunities, stay connected globally, and foster collaborations without leaving the platform.</p>
+                            <p><strong>E-commerce Integration:</strong> Network with sellers and buyers, purchase premium networking features like enhanced visibility or event tickets, or sell services/products directly through profile marketplaces. Transactions use integrated payment gateways for secure, instant buys/sales within networking groups.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service2">
+                            E-commerce & Retail
+                        </button>
+                    </h2>
+                    <div id="service2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Access all global shops in one unified page. Browse, search, and purchase products from worldwide retailers seamlessly. Features: AI-powered recommendations, secure checkout, real-time inventory, multi-currency support, and seller dashboards for businesses. Benefits: Simplified shopping experience, global market access for buyers and sellers, reduced cart abandonment with in-platform payments.</p>
+                            <p><strong>E-commerce Integration:</strong> Core to this service, it allows direct buying/selling of physical/digital goods, subscriptions for premium seller tools, and integration with other services for cross-selling (e.g., buy health products from wellness recommendations).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service3">
+                            Social Media & Community
+                        </button>
+                    </h2>
+                    <div id="service3" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Create and join communities, share posts, photos, and videos. Engage with like-minded users through feeds, stories, and live sessions. Features: Customizable feeds, hashtag discovery, moderation tools, and privacy controls. Benefits: Build meaningful relationships, discover content tailored to your interests, and participate in global discussions all in one place.</p>
+                            <p><strong>E-commerce Integration:</strong> Sell/buy community-exclusive items, sponsor posts, or purchase ad boosts. Integrated shops in groups allow direct transactions, with AI suggesting products based on discussions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service4">
+                            Messaging & Communication
+                        </button>
+                    </h2>
+                    <div id="service4" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Instant messaging, group chats, voice/video calls, and email integration. Send messages, files, and media securely. Features: End-to-end encryption, read receipts, bots for automation, and cross-device sync. Benefits: Unified communication hub, no need for multiple apps, enhanced productivity for personal and business use.</p>
+                            <p><strong>E-commerce Integration:</strong> Send/receive invoices, pay via chat links, or shop in conversations. Bots handle orders, payments, and tracking, enabling seamless transactions during discussions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service5">
+                            Finance & Crypto
+                        </button>
+                    </h2>
+                    <div id="service5" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Manage finances, trade crypto, send/receive payments. Features: Wallet integration, real-time market data, transaction history, budgeting tools, and secure crypto exchanges. Benefits: All-in-one financial management, low-fee transactions, global accessibility, empowering users in emerging markets like South Africa.</p>
+                            <p><strong>E-commerce Integration:</strong> Direct crypto payments for e-commerce, buy/sell financial products, or subscribe to premium finance tools. Integrate with retail for seamless checkout using wallets.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service6">
+                            Learning & Education
+                        </button>
+                    </h2>
+                    <div id="service6" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Access courses, tutorials, and resources from global providers. Features: Interactive lessons, quizzes, certifications, AI tutors, and collaborative study groups. Benefits: Affordable education, personalized learning paths, bridging digital divide for students in Johannesburg or beyond.</p>
+                            <p><strong>E-commerce Integration:</strong> Purchase courses, books, or tools directly, subscribe to premium content, or sell educational materials. AI recommends paid resources based on progress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service7">
+                            Jobs & Careers
+                        </button>
+                    </h2>
+                    <div id="service7" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Search jobs, post resumes, recruit talent. Features: AI job matching, skill assessments, interview scheduling, and career advice. Benefits: Connect employers and job seekers globally, support economic growth in South Africa with targeted opportunities for youth and women.</p>
+                            <p><strong>E-commerce Integration:</strong> Pay for premium job listings, buy career coaching sessions, or purchase skill certification tests. Employers can buy recruitment tools or ads.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service8">
+                            Content & Media
+                        </button>
+                    </h2>
+                    <div id="service8" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Stream videos, music, podcasts, and read articles. Features: Personalized recommendations, offline downloads, creator tools, and monetization options. Benefits: Endless entertainment, support for content creators, integrated with social sharing for viral reach.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy premium content, subscribe to channels, or sell your media. Integrated shops for merchandise tied to content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service9">
+                            Travel & Transport
+                        </button>
+                    </h2>
+                    <div id="service9" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Book flights, hotels, rides, and plan trips. Features: Real-time availability, maps integration, reviews, and itinerary management. Benefits: Seamless travel planning, global options with local focus for South African users, integrated payments for hassle-free bookings.</p>
+                            <p><strong>E-commerce Integration:</strong> Direct booking purchases, buy travel insurance or add-ons, sell tour packages. AI suggests and sells personalized deals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service10">
+                            Health & Wellness
+                        </button>
+                    </h2>
+                    <div id="service10" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>AI-powered virtual doctors, fitness tracking, wellness tips. Features: Symptom checker, telemedicine, health records, and personalized plans. Benefits: Accessible healthcare, especially in underserved areas, proactive wellness tools for better living.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy health products, supplements, or book paid consultations. Subscribe to premium wellness plans or sell fitness gear.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service11">
+                            Utilities & Tools
+                        </button>
+                    </h2>
+                    <div id="service11" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Everyday tools like calculators, converters, notes, and calendars. Features: Integration with other services, cloud sync, and customization. Benefits: All essentials in one place, boosting productivity without app clutter.</p>
+                            <p><strong>E-commerce Integration:</strong> Purchase premium tool upgrades, buy add-ons like advanced calculators, or sell custom tools/templates.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service12">
+                            Entertainment
+                        </button>
+                    </h2>
+                    <div id="service12" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Games, movies, music, and interactive fun. Features: Multiplayer options, leaderboards, and social integration. Benefits: Relax and enjoy, connect with friends through shared experiences.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy games, in-game items, movie tickets, or premium access. Sell virtual goods or entertainment content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service13">
+                            Business Software
+                        </button>
+                    </h2>
+                    <div id="service13" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>CRM, project management, invoicing, and analytics. Features: Collaboration tools, automation, and scalable for SMEs. Benefits: Streamline operations, grow your business within the ecosystem.</p>
+                            <p><strong>E-commerce Integration:</strong> Sell software subscriptions, buy add-ons, handle e-invoicing with payments. Integrate with retail for business sales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service14">
+                            Real Estate & Housing
+                        </button>
+                    </h2>
+                    <div id="service14" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Search properties, virtual tours, listings. Features: AI matching, mortgage calculators, and agent connections. Benefits: Find your dream home or investment, simplified real estate transactions.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy/sell properties, pay agent fees, purchase home goods via integrated shops. Secure transactions for deposits or rentals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service15">
+                            Developer/Tech Tools
+                        </button>
+                    </h2>
+                    <div id="service15" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Code editors, APIs, testing environments. Features: Collaboration, version control, and deployment tools. Benefits: Build and innovate directly on the platform, for devs and tech enthusiasts.</p>
+                            <p><strong>E-commerce Integration:</strong> Sell code snippets, buy premium APIs, subscribe to advanced tools. Marketplace for dev services and products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service16">
+                            Government/Civic Tech
+                        </button>
+                    </h2>
+                    <div id="service16" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Tax management, civic services, e-governance tools. Features: Secure filing, reminders, and integration with official systems. Benefits: Simplify bureaucracy, ensure compliance, empower citizens.</p>
+                            <p><strong>E-commerce Integration:</strong> Pay government fees/taxes directly, buy related services like legal docs, or sell civic tech tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service17">
+                            Environmental/Sustainability
+                        </button>
+                    </h2>
+                    <div id="service17" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Carbon trackers, eco-tips, sustainable shopping. Features: Impact calculators, community challenges, and green certifications. Benefits: Promote sustainability, track your eco-footprint easily.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy eco-products, subscribe to green plans, sell sustainable goods via dedicated marketplace.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service18">
+                            Logistics & Delivery
+                        </button>
+                    </h2>
+                    <div id="service18" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Track shipments, manage deliveries, partner with couriers. Features: Real-time tracking, route optimization, and integration with e-commerce. Benefits: Efficient logistics for businesses, reliable delivery for users.</p>
+                            <p><strong>E-commerce Integration:</strong> Pay for shipping, buy logistics services, integrate with retail for end-to-end order fulfillment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service19">
+                            AI & Machine Learning Apps
+                        </button>
+                    </h2>
+                    <div id="service19" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Custom AI tools, predictions, automation. Features: Model building, data analysis, and integration across services. Benefits: Intelligent insights, personalized experiences, boost efficiency.</p>
+                            <p><strong>E-commerce Integration:</strong> AI-driven product recommendations, buy premium AI models, sell custom AI solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service20">
+                            Augmented Reality/Virtual Reality
+                        </button>
+                    </h2>
+                    <div id="service20" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>AR/VR experiences for shopping, education, gaming. Features: Immersive simulations, device compatibility, and social VR. Benefits: Enhanced engagement, virtual try-ons, innovative learning.</p>
+                            <p><strong>E-commerce Integration:</strong> AR product try-ons leading to purchases, buy VR content, sell virtual goods/NFTs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service21">
+                            Blockchain/Web3 Apps
+                        </button>
+                    </h2>
+                    <div id="service21" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>NFTs, decentralized finance, smart contracts. Features: Wallet integration, secure transactions, and dApp hosting. Benefits: True ownership, transparent dealings, future-proof tech.</p>
+                            <p><strong>E-commerce Integration:</strong> Blockchain-secured payments, buy/sell NFTs, DeFi loans for purchases.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service22">
+                            Online Computer
+                        </button>
+                    </h2>
+                    <div id="service22" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Full virtual desktop environment. Features: File management, apps, and cloud access. Benefits: Access your digital life from any device, anywhere.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy software/apps, pay for cloud storage upgrades, sell digital files.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service23">
+                            Cloud Computing Services
+                        </button>
+                    </h2>
+                    <div id="service23" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Storage, computing power, backups. Features: Scalable resources, auto-sync, and security. Benefits: Reliable data management, cost-effective for businesses and individuals.</p>
+                            <p><strong>E-commerce Integration:</strong> Subscribe to storage plans, buy computing credits, sell cloud-based services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service24">
+                            Data Recovery Tools
+                        </button>
+                    </h2>
+                    <div id="service24" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>Recover lost files, backups, and data. Features: AI-assisted recovery, secure processes. Benefits: Peace of mind, quick restoration of important information.</p>
+                            <p><strong>E-commerce Integration:</strong> Pay for premium recovery services, buy backup plans, sell data tools.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service25">
+                            And More
+                        </button>
+                    </h2>
+                    <div id="service25" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>CXplora continuously expands with emerging tech like IoT integration, advanced AR/VR, and custom apps. Stay tuned for updates that keep you ahead in the digital world.</p>
+                            <p><strong>E-commerce Integration:</strong> Buy new features/add-ons, subscribe to updates, sell innovative tech products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="amazing-desc">Built from scratch for maximum control, privacy, and innovation — CXplora grows with you, with e-commerce woven into every service for seamless transactions.</p>
+            <img src="https://thumbs.dreamstime.com/b/abstract-digital-circuit-texture-pattern-technology-innovation-concept-design-background-eps-vector-75443564.jpg" alt="Tech Innovation" class="img-fluid">
+        </section>
+
+        <!-- Payment Gateway -->
+        <section id="payment" class="card">
+            <div class="text-center"><i class="fas fa-credit-card section-icon"></i></div>
+            <h2>Secure Payment Gateway</h2>
+            <p>Make payments effortlessly inside CXplora — no redirects, no leaving the platform. Buy products, subscribe to premium features, fund wallets, pay for consultations, book services, or settle fees — all in one secure flow.</p>
+            <p>Supported gateways include Stripe (global cards), PayPal (wallets), PayFast (South Africa EFT/mobile), and more. Features: end-to-end encryption, PCI DSS & POPIA compliance, biometric/OTP auth, real-time fraud detection (AI-powered), instant payouts for sellers, multi-currency support.</p>
+            <p class="amazing-desc">Fast, safe, borderless payments — built for trust and convenience.</p>
+            <img src="https://www.scnsoft.com/ecommerce/payment-gateway-integration/online-payment-gateway_cover.svg" alt="Secure Payments" class="img-fluid">
+        </section>
+
+        <!-- Overview -->
+        <section id="overview" class="card">
+            <div class="text-center"><i class="fas fa-info-circle section-icon"></i></div>
+            <h2>Platform Overview</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Platform Type:</strong> Unified digital ecosystem / online computer</li>
+                <li class="list-group-item"><strong>Location:</strong> Johannesburg, South Africa — global scale</li>
+                <li class="list-group-item"><strong>Core Technology:</strong> Built 100% from scratch — no third-party dependencies</li>
+                <li class="list-group-item"><strong>Model:</strong> Freemium (core free, premium upgrades available)</li>
+                <li class="list-group-item"><strong>Inclusivity:</strong> Designed for all — bridging digital divide in South Africa & beyond</li>
+            </ul>
+            <p class="amazing-desc">A self-sustaining digital world that puts you in control.</p>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="card">
+            <div class="text-center"><i class="fas fa-question-circle section-icon"></i></div>
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What is CXplora?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show">
+                        <div class="accordion-body">A single unified platform combining social, shopping, finance, education, health, entertainment, AI, and more.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How do I pay on CXplora?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse">
+                        <div class="accordion-body">Secure gateways like Paystack, Stripe, PayPal — instant, encrypted, multi-currency.</div>
+                    </div>
+                </div>
+                <!-- Add more FAQs as needed -->
+            </div>
+        </section>
+
+        <!-- Policies -->
+        <section id="policies" class="card">
+            <div class="text-center"><i class="fas fa-file-contract section-icon"></i></div>
+            <h2>All Policies, Terms, and Conditions</h2>
+            <p>Click to expand each policy for full details. These ensure a safe, fair, and transparent experience on CXplora.</p>
+            <div class="accordion" id="policiesAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#terms">
+                            Terms and Conditions
+                        </button>
+                    </h2>
+                    <div id="terms" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                Welcome to <strong>CXplora</strong>. By accessing, registering, downloading, or using any part of our platform, applications, or services, you agree to comply with and be legally bound by these Terms and Conditions. If you do not agree with any part of these terms, you must stop using CXplora immediately.
+                            </p>
+                            <h3>1. Use of the Platform</h3>
+                            <p>
+                                You must be at least <strong>18 years old</strong> to create an account or use CXplora independently. You agree to use the platform only for lawful, ethical, and appropriate purposes. Any misuse of the platform, including fraud, harassment, data scraping, unauthorized access, or activities that harm other users or CXplora, is strictly prohibited. You are fully responsible for all actions performed under your account, whether by you or anyone else using your credentials.
+                            </p>
+                            <h3>2. Services and Products</h3>
+                            <p>
+                                CXplora offers a unified digital ecosystem that may include social networking, messaging, content sharing, e-commerce, digital marketplaces, entertainment, educational resources, financial tools, AI-powered services, and other digital features. Services may vary by region and may be updated, enhanced, limited, or discontinued at any time. All services are provided on an <strong>"as-is"</strong> and <strong>"as-available"</strong> basis without guarantees of availability or performance.
+                            </p>
+                            <h3>3. Payments</h3>
+                            <p>
+                                Certain features or services may require payments, subscriptions, or transaction fees. All payments are processed through secure, third-party payment gateways. You agree to provide accurate, complete, and up-to-date payment information. CXplora does not store your full payment details and is not responsible for transaction failures, delays, chargebacks, or disputes caused by payment providers, banks, or network issues.
+                            </p>
+                            <h3>4. Intellectual Property</h3>
+                            <p>
+                                All platform content, including but not limited to software, source code, designs, logos, trademarks, text, graphics, and multimedia, is owned by CXplora or its licensors. You are granted a limited, non-exclusive, non-transferable right to access and use the platform for personal or authorized business purposes only. Any copying, modification, resale, reverse-engineering, or redistribution without prior written permission is strictly prohibited.
+                            </p>
+                            <h3>5. Limitation of Liability</h3>
+                            <p>
+                                To the maximum extent permitted by law, CXplora shall not be liable for any indirect, incidental, special, consequential, or punitive damages. This includes, but is not limited to, loss of data, loss of profits, service interruptions, or damages resulting from reliance on platform content, third-party services, or technical failures.
+                            </p>
+                            <h3>6. Changes to Terms</h3>
+                            <p>
+                                CXplora reserves the right to modify, update, or replace these Terms and Conditions at any time to reflect legal, technical, or business changes. Updated terms will be effective immediately upon posting. Your continued use of the platform after changes are published constitutes your acceptance of the revised terms.
+                            </p>
+                            <h3>7. Governing Law</h3>
+                            <p>
+                                These Terms and Conditions, and any disputes or claims arising from or related to the use of CXplora, shall be governed by and interpreted in accordance with the laws of the <strong>Republic of South Africa</strong>, without regard to conflict of law principles.
+                            </p>
+                            <p class="amazing-desc">
+                                These Terms and Conditions are designed to promote fairness, transparency, security, and trust for all users within the CXplora unified digital ecosystem 🌍✨
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#refund">
+                            Refund Policy
+                        </button>
+                    </h2>
+                    <div id="refund" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                At <strong>CXplora</strong>, we aim to deliver high-quality digital and commercial experiences through our unified platform. This Refund Policy explains when refunds may be requested, how they are processed, and the conditions under which they apply. All refund requests are handled fairly and in accordance with applicable consumer protection laws.
+                            </p>
+                            <h3>1. E-commerce Purchases</h3>
+                            <p>
+                                For physical or digital products purchased through CXplora’s integrated global e-commerce stores, refunds may be requested within <strong>7 days</strong> of receiving the item. Refunds are applicable only if the product is defective, damaged, incomplete, or materially different from its description at the time of purchase.
+                            </p>
+                            <p>
+                                To request a refund, customers must follow the steps below:
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    Contact our support team with your order number, proof of purchase, and a clear explanation of the issue.
+                                </li>
+                                <li>
+                                    <i class="fas fa-box"></i>
+                                    Return the physical product in its original packaging and condition, including accessories and documentation, where applicable.
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    Once approved, refunds will be processed to the original payment method within <strong>5–10 business days</strong>, depending on your bank or payment provider.
+                                </li>
+                            </ul>
+                            <p>
+                                Please note that return shipping costs are the responsibility of the customer unless the return is a result of an error on our part, such as incorrect or defective items.
+                            </p>
+                            <h3>2. Subscriptions</h3>
+                            <p>
+                                Subscriptions to premium CXplora features, including but not limited to ad-free experiences, advanced AI tools, or exclusive content, are <strong>non-refundable</strong>. Once a subscription period has started, no refunds will be issued for unused time or partial billing periods.
+                            </p>
+                            <p>
+                                You may cancel your subscription at any time through your account settings. Cancellation will prevent future charges, but access to subscribed features will continue until the end of the current billing cycle.
+                            </p>
+                            <h3>3. Other Services (e.g., Consultations, Fees)</h3>
+                            <p>
+                                Payments made for one-time services, including AI-powered consultations, digital services, processing fees, or administrative services, are generally <strong>non-refundable</strong> once the service has been delivered or initiated.
+                            </p>
+                            <p>
+                                If a service was not provided due to a technical error or fault on the CXplora platform, you may submit a refund request within <strong>24 hours</strong> of the payment. Each case will be reviewed individually to determine eligibility.
+                            </p>
+                            <h3>4. General Terms</h3>
+                            <p>
+                                All refund requests are subject to verification and approval. CXplora reserves the right to decline refund requests that do not meet the conditions outlined in this policy or that indicate misuse, abuse, or fraudulent activity.
+                            </p>
+                            <p>
+                                Refunds may be delayed or declined due to factors outside our control, including payment provider processing times, banking delays, or incomplete customer information.
+                            </p>
+                            <p>
+                                For questions, clarification, or refund assistance, please contact our support team at
+                                <strong>complexexplora@gmail.com</strong>.
+                            </p>
+                            <p class="amazing-desc">
+                                Our refund policy is designed to protect both users and the platform, ensuring transparency, trust, and confidence in every CXplora transaction 💙
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#privacy">
+                            Privacy Policy
+                        </button>
+                    </h2>
+                    <div id="privacy" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                At <strong>CXplora</strong>, your privacy and trust are extremely important to us. This Privacy Policy explains how we collect, use, store, protect, and share your personal information when you access or use our platform, applications, websites, and services. By using CXplora, you consent to the practices described in this policy.
+                            </p>
+                            <h3>1. Information We Collect</h3>
+                            <p>
+                                We collect information that helps us provide, maintain, and improve CXplora. This may include personal details such as your name, email address, phone number, profile information, payment-related data, and account credentials. We also collect usage data, device information, log files, and interaction data when you engage with our services, including e-commerce activities, subscriptions, content sharing, and platform features.
+                            </p>
+                            <h3>2. How We Use Your Information</h3>
+                            <p>
+                                Your information is used to operate and enhance the CXplora platform. This includes processing payments and transactions, delivering purchased services or products, personalizing your experience, providing customer support, sending important service-related notifications, improving platform performance, and ensuring compliance with legal and regulatory requirements. CXplora does <strong>not</strong> sell your personal data to third parties.
+                            </p>
+                            <h3>3. Data Security</h3>
+                            <p>
+                                We implement appropriate technical and organizational security measures such as encryption, secure servers, firewalls, and restricted access controls to protect your personal information from unauthorized access, alteration, or disclosure. While we take strong precautions, no digital system is completely immune to security risks, and we cannot guarantee absolute protection of your data.
+                            </p>
+                            <h3>4. Sharing Information</h3>
+                            <p>
+                                We only share your information when necessary to deliver our services. This includes sharing limited data with trusted third-party service providers such as payment processors (e.g., Paystack, Stripe), hosting providers, analytics services, and customer support tools. We may also disclose information if required by law, court order, or governmental authority, or to protect the rights, safety, and integrity of CXplora and its users.
+                            </p>
+                            <h3>5. Your Rights</h3>
+                            <p>
+                                You have the right to access, correct, update, restrict, or request deletion of your personal data. You may also object to certain processing activities or withdraw consent where applicable. CXplora complies with relevant data protection regulations, including the <strong>General Data Protection Regulation (GDPR)</strong> and South Africa’s <strong>Protection of Personal Information Act (POPIA)</strong>. Requests can be made by contacting our support team.
+                            </p>
+                            <h3>6. Cookies</h3>
+                            <p>
+                                CXplora uses cookies and similar technologies to improve functionality, analyze platform usage, remember user preferences, and enhance overall user experience. You can control or disable cookies through your browser or device settings; however, some features of the platform may not function properly if cookies are disabled.
+                            </p>
+                            <h3>7. Changes to This Policy</h3>
+                            <p>
+                                We may update this Privacy Policy from time to time to reflect changes in our services, legal requirements, or business practices. Any updates will be posted on this page, and continued use of CXplora after changes are published constitutes acceptance of the revised policy.
+                            </p>
+                            <p>
+                                If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at
+                                <strong>complexexplora@gmail.com</strong>.
+                            </p>
+                            <p class="amazing-desc">
+                                Your privacy is our priority — protecting your data while delivering a secure, transparent, and unified digital experience 🌐🔐
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipping">
+                            Shipping & Returns Policy
+                        </button>
+                    </h2>
+                    <div id="shipping" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <p>
+                                CXplora primarily delivers digital services and products through its unified platform. However, for any physical goods purchased via our integrated e-commerce marketplace, the following shipping and returns policies apply. These policies are designed to ensure transparency, fairness, and compliance with applicable consumer protection laws.
+                            </p>
+                            <h3>1. Shipping Policy</h3>
+                            <p>
+                                For physical products, shipping is fulfilled by trusted third-party logistics and courier partners. This may include local courier services within South Africa or international shipping providers such as DHL, FedEx, or similar carriers, depending on availability and destination.
+                            </p>
+                            <p>
+                                Estimated delivery timelines are as follows:
+                            </p>
+                            <ul>
+                                <li>Local (South Africa): approximately <strong>3–5 business days</strong></li>
+                                <li>International: approximately <strong>7–14 business days</strong>, subject to customs clearance</li>
+                            </ul>
+                            <p>
+                                Shipping costs are calculated at checkout based on product weight, delivery location, and selected shipping method. Once your order has been dispatched, tracking information will be sent to your registered email address to allow you to monitor delivery progress.
+                            </p>
+                            <p>
+                                Digital products and services, including downloads, subscriptions, and platform-based features, are delivered electronically and become available immediately after successful payment confirmation.
+                            </p>
+                            <h3>2. Returns Policy</h3>
+                            <p>
+                                Returns are accepted for eligible physical products within <strong>7 days</strong> of delivery, provided the item is defective, damaged, or significantly different from its original description. Returned items must be unused and, where possible, in their original packaging with all accessories included.
+                            </p>
+                            <p>
+                                Due to their nature, digital products, subscriptions, downloadable content, and service-based offerings (such as consultations or digital processing services) are <strong>non-returnable</strong> once delivered or accessed.
+                            </p>
+                            <p>
+                                To initiate a return, please follow the process below:
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    Contact our support team with your order number, proof of purchase, and a detailed explanation of the issue.
+                                </li>
+                                <li>
+                                    <i class="fas fa-box-open"></i>
+                                    Return the item using a secure shipping method. Return shipping costs are the responsibility of the customer unless the return is due to an error or defect caused by CXplora or its sellers.
+                                </li>
+                                <li>
+                                    <i class="fas fa-sync"></i>
+                                    Once the returned item is received and inspected, CXplora will process a refund or replacement, depending on availability and your preference.
+                                </li>
+                            </ul>
+                            <p>
+                                All shipping, returns, and refunds are handled in accordance with the <strong>South African Consumer Protection Act (CPA)</strong> and applicable international consumer protection regulations where relevant.
+                            </p>
+                            <p class="amazing-desc">
+                                Smooth shipping, transparent delivery, and fair returns help ensure your CXplora shopping experience is simple, secure, and stress-free 🚚✨
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="card">
+            <div class="text-center"><i class="fas fa-envelope section-icon"></i></div>
+            <h2>Get in Touch</h2>
+            <p><strong>CXplora Technologies (Pty) Ltd</strong></p>
+            <p><strong>Contact:</strong> Boy Lekalakala</p>
+            <p><strong>Email:</strong> boylekalakala808@gmail.com | complexexplora@gmail.com</p>
+            <p><strong>Address:</strong> 19 Fredman Drive, Sandton, Johannesburg, 2146</p>
+            <p class="amazing-desc">Ready to explore the future? Reach out today!</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2023-2026 Complex EXplora By Boy Lekalakala – Unifying Your Digital World. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
